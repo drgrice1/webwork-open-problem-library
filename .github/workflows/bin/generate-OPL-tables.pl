@@ -513,7 +513,7 @@ sub pgfiles {
 		$pgpath =~ s|^$libraryRoot|Library|;
 		$pgpath =~ s|^$contribRoot|Contrib|;
 		$pgpath =~ m|^([^/]*)/(.*)|;
-		my ($pglib, $pgpath) = ($1, $2);
+		(my $pglib, $pgpath) = ($1, $2);
 
 		my $tags = Tags->new($name);
 
